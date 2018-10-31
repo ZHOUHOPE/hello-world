@@ -1,3 +1,43 @@
-//æ±‚è§£ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹çš„æ ¹
-//æŸ¥é˜…sqrt()å‡½æ•°
-//æ³¨æ„æœ‰æ²¡æœ‰è§£
+//Çó½âÒ»Ôª¶ş´Î·½³ÌµÄ¸ù
+//²éÔÄsqrt()º¯Êı
+//×¢ÒâÓĞÃ»ÓĞ½â
+#include <stdio.h>
+#include <math.h>//µ÷ÓÃsqrtÇódeltaµÄÆ½·½¸ù
+void CalculateRealRoot(double a,double b,double c);//º¯ÊıËµÃ÷ 
+int main() 
+{   
+    double a,b,c;//¶¨Òåa£¬b£¬cÎª¶ş´Î·½³ÌµÄÏµÊı
+    printf("a=");
+    scanf("%lf",&a);
+    printf("b=");
+    scanf("%lf",&b);
+    printf("c=");
+    scanf("%lf",&c);
+    CalculateRealRoot(a,b,c);//µ÷ÓÃº¯Êı 
+	return 0;
+}
+void CalculateRealRoot(double a,double b,double c)
+{
+	double delta,x1,x2;//¶¨Òåx
+	delta=b*b-4*a*c;
+	if ( delta<0 )
+	{
+		printf("ÎŞÊµ¸ù\n");
+	 } 
+	 else 
+	 {
+	 	if ( delta==0 )
+	 	{
+	 		x1=-b/(2*a);
+	 		x2=-b/(2*a);
+	 		printf("x1=%lf,x2=%lf",x1,x2);
+		 }
+		 else
+		 {
+		 	x1=(-b+sqrt(delta))/(2*a);
+		 	x2=(-b-sqrt(delta))/(2*a);
+		 	printf("x1=%lf,x2=%lf",x1,x2);
+		 }
+		 
+	 }
+}
