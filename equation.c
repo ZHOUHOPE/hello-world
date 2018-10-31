@@ -1,4 +1,32 @@
-//æ±‚è§£å¦‚ä¸‹æ–¹ç¨‹ç»„
+//Çó½âÈçÏÂ·½³Ì×é
 //ax + by = c
 //dx + ey = f
-//æ³¨æ„è¾“å…¥/è¾“å‡ºï¼Œæ•°æ®ç±»å‹
+//×¢ÒâÊäÈë/Êä³ö£¬Êı¾İÀàĞÍ
+#include <stdio.h>
+int main()
+{   float a,b,c,d,e,f,x,y; //¶¨Òå±äÁ¿ 
+    printf("a=");
+    scanf("%f",&a);
+    printf("b=");
+    scanf("%f",&b);
+    printf("c=");
+    scanf("%f",&c);
+    printf("d=");
+    scanf("%f",&d);
+    printf("e=");
+    scanf("%f",&e);
+    printf("f=");
+    scanf("%f",&f);//ÒÔÉÏÊäÈë±äÁ¿Öµ 
+    if(b*d==a*e)//µ±·ÖÄ¸ÎªÁãÊ± 
+    {
+	printf("ÎŞÊµ¸ù");
+	} 
+	else//·ÖÄ¸²»ÎªÁã 
+	{
+    y=(c*d-a*f)/(b*d-a*e);
+    x=(c*e-b*f)/(a*e-b*d);
+    printf("x=%f\n",x);
+    printf("y=%f",y);
+	}
+    return 0;
+ } 
